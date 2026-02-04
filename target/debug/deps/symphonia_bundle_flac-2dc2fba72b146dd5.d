@@ -1,0 +1,10 @@
+E:\12_Python_Prj\Roobar3000\target\debug\deps\symphonia_bundle_flac-2dc2fba72b146dd5.d: C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\lib.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\decoder.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\demuxer.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\frame.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\parser.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\validate.rs
+
+E:\12_Python_Prj\Roobar3000\target\debug\deps\libsymphonia_bundle_flac-2dc2fba72b146dd5.rmeta: C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\lib.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\decoder.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\demuxer.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\frame.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\parser.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\validate.rs
+
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\lib.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\decoder.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\demuxer.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\frame.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\parser.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-bundle-flac-0.5.5\src\validate.rs:

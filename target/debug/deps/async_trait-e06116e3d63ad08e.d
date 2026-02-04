@@ -1,0 +1,12 @@
+E:\12_Python_Prj\Roobar3000\target\debug\deps\async_trait-e06116e3d63ad08e.d: C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\lib.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\args.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\bound.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\expand.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\lifetime.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\parse.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\receiver.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\verbatim.rs
+
+E:\12_Python_Prj\Roobar3000\target\debug\deps\async_trait-e06116e3d63ad08e.dll: C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\lib.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\args.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\bound.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\expand.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\lifetime.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\parse.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\receiver.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\verbatim.rs
+
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\lib.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\args.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\bound.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\expand.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\lifetime.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\parse.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\receiver.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\async-trait-0.1.89\src\verbatim.rs:

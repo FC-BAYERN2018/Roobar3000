@@ -1,0 +1,11 @@
+E:\12_Python_Prj\Roobar3000\target\debug\deps\yaml_rust2-bd9fcf3b7db73f77.d: C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\lib.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\char_traits.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\debug.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\emitter.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\parser.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\scanner.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\yaml.rs
+
+E:\12_Python_Prj\Roobar3000\target\debug\deps\libyaml_rust2-bd9fcf3b7db73f77.rmeta: C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\lib.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\char_traits.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\debug.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\emitter.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\parser.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\scanner.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\yaml.rs
+
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\lib.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\char_traits.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\debug.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\emitter.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\parser.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\scanner.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yaml-rust2-0.8.1\src\yaml.rs:

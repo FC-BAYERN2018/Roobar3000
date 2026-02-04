@@ -1,0 +1,5 @@
+E:\12_Python_Prj\Roobar3000\target\debug\build\windows_x86_64_gnu-bb839b896d4d0ec9\build_script_build-bb839b896d4d0ec9.d: C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows_x86_64_gnu-0.52.6\build.rs
+
+E:\12_Python_Prj\Roobar3000\target\debug\build\windows_x86_64_gnu-bb839b896d4d0ec9\build_script_build-bb839b896d4d0ec9.exe: C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows_x86_64_gnu-0.52.6\build.rs
+
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows_x86_64_gnu-0.52.6\build.rs:
