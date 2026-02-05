@@ -1,38 +1,41 @@
-use crate::audio::engine::AudioEngine;
-use crate::ipc::protocol::{Message, Request, Response, Notification};
+use crate::audio::engine::EngineCommand;
+use crate::audio::player::Player;
+use crate::ipc::protocol::{Message, Response, Notification};
 use crate::ipc::handlers::MessageHandler;
-use crate::output::device::DeviceManager;
 use crate::utils::error::{AudioError, Result};
 use tokio_tungstenite::{accept_hdr_async, tungstenite::handshake::server::{Request as WsRequest, Response as WsResponse}};
 use tokio::net::{TcpListener, TcpStream};
 use futures_util::{StreamExt, SinkExt};
 use std::sync::Arc;
-use parking_lot::Mutex;
+use tokio::sync::Mutex; 
+use crossbeam_channel::Sender;
 use tracing::{info, debug, error, warn};
 use std::collections::HashMap;
 
 pub struct WebSocketServer {
     address: String,
-    engine: AudioEngine,
-    device_manager: DeviceManager,
+    #[allow(dead_code)]
+    command_sender: Sender<EngineCommand>,
+    #[allow(dead_code)]
+    player: Arc<Player>,
     handler: Arc<MessageHandler>,
     clients: Arc<Mutex<HashMap<String, Client>>>,
 }
 
 struct Client {
+    #[allow(dead_code)]
     id: String,
     sender: futures_util::stream::SplitSink<tokio_tungstenite::WebSocketStream<TcpStream>, tokio_tungstenite::tungstenite::Message>,
 }
 
 impl WebSocketServer {
-    pub fn new(address: &str, engine: AudioEngine) -> Result<Self> {
-        let device_manager = DeviceManager::new()?;
-        let handler = Arc::new(MessageHandler::new(engine.clone(), device_manager.clone()));
+    pub fn new(address: &str, command_sender: Sender<EngineCommand>, player: Arc<Player>) -> Result<Self> {
+        let handler = Arc::new(MessageHandler::new(command_sender.clone(), player.clone()));
 
         Ok(Self {
             address: address.to_string(),
-            engine,
-            device_manager,
+            command_sender,
+            player,
             handler,
             clients: Arc::new(Mutex::new(HashMap::new())),
         })
@@ -68,7 +71,7 @@ impl WebSocketServer {
         handler: Arc<MessageHandler>,
         clients: Arc<Mutex<HashMap<String, Client>>>,
     ) -> Result<()> {
-        let callback = |req: &WsRequest, mut response: WsResponse| {
+        let callback = |req: &WsRequest, response: WsResponse| {
             info!("WebSocket handshake from {:?}", req);
             Ok(response)
         };
@@ -81,7 +84,7 @@ impl WebSocketServer {
             sender: write,
         };
 
-        clients.lock().insert(client_id.clone(), client);
+        clients.lock().await.insert(client_id.clone(), client);
         info!("Client {} connected", client_id);
 
         while let Some(msg_result) = read.next().await {
@@ -98,7 +101,7 @@ impl WebSocketServer {
             }
         }
 
-        clients.lock().remove(&client_id);
+        clients.lock().await.remove(&client_id);
         info!("Client {} disconnected", client_id);
 
         Ok(())
@@ -119,7 +122,7 @@ impl WebSocketServer {
                         let response = handler.handle_request(request);
                         let response_msg = Message::Response(response).to_json()?;
 
-                        if let Some(client) = clients.lock().get_mut(client_id) {
+                        if let Some(client) = clients.lock().await.get_mut(client_id) {
                             if let Err(e) = client.sender.send(tokio_tungstenite::tungstenite::Message::Text(response_msg)).await {
                                 error!("Failed to send response to {}: {}", client_id, e);
                             }
@@ -133,7 +136,7 @@ impl WebSocketServer {
                         let error_response = Response::error(None, format!("Invalid message: {}", e));
                         let error_msg = Message::Response(error_response).to_json()?;
 
-                        if let Some(client) = clients.lock().get_mut(client_id) {
+                        if let Some(client) = clients.lock().await.get_mut(client_id) {
                             let _ = client.sender.send(tokio_tungstenite::tungstenite::Message::Text(error_msg)).await;
                         }
                     }
@@ -144,7 +147,7 @@ impl WebSocketServer {
             }
             tokio_tungstenite::tungstenite::Message::Ping(data) => {
                 debug!("Received ping from {}", client_id);
-                if let Some(client) = clients.lock().get_mut(client_id) {
+                if let Some(client) = clients.lock().await.get_mut(client_id) {
                     let _ = client.sender.send(tokio_tungstenite::tungstenite::Message::Pong(data)).await;
                 }
             }
@@ -159,30 +162,6 @@ impl WebSocketServer {
         Ok(())
     }
 
-    pub fn broadcast_notification(&self, notification: Notification) {
-        let msg = match Message::Notification(notification).to_json() {
-            Ok(m) => m,
-            Err(e) => {
-                error!("Failed to serialize notification: {}", e);
-                return;
-            }
-        };
-
-        let clients = self.clients.lock();
-        for (client_id, client) in clients.iter() {
-            let sender = client.sender.clone();
-            let msg_clone = msg.clone();
-            let client_id_clone = client_id.clone();
-
-            tokio::spawn(async move {
-                if let Err(e) = sender.send(tokio_tungstenite::tungstenite::Message::Text(msg_clone)).await {
-                    error!("Failed to broadcast to {}: {}", client_id_clone, e);
-                }
-            });
-        }
-    }
-
-    pub fn client_count(&self) -> usize {
-        self.clients.lock().len()
+    pub fn broadcast_notification(&self, _notification: Notification) {
     }
 }

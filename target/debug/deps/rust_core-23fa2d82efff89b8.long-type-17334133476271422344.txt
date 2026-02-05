@@ -1,0 +1,2 @@
+tokio_tungstenite::tungstenite::Error
+From<symphonia::symphonia_core::errors::Error>

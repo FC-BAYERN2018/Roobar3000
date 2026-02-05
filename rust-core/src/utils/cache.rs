@@ -4,7 +4,6 @@ use std::sync::Arc;
 use parking_lot::Mutex;
 use std::time::{Duration, Instant};
 use serde::{Serialize, Deserialize};
-use crate::utils::error::{AudioError, Result};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Metadata {
@@ -192,20 +191,23 @@ impl AsyncMetadataCache {
     }
 
     pub async fn get(&self, path: PathBuf) -> Option<Metadata> {
+        let cache = Arc::clone(&self.cache);
         tokio::task::spawn_blocking(move || {
-            self.cache.get(&path)
+            cache.get(&path)
         }).await.ok().flatten()
     }
 
     pub async fn put(&self, path: PathBuf, metadata: Metadata) {
+        let cache = Arc::clone(&self.cache);
         tokio::task::spawn_blocking(move || {
-            self.cache.put(path, metadata);
+            cache.put(path, metadata);
         }).await.ok();
     }
 
     pub async fn remove(&self, path: PathBuf) {
+        let cache = Arc::clone(&self.cache);
         tokio::task::spawn_blocking(move || {
-            self.cache.remove(&path);
+            cache.remove(&path);
         }).await.ok();
     }
 

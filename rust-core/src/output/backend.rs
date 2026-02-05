@@ -1,15 +1,15 @@
 use crate::audio::format::AudioFormat;
 use crate::utils::error::{AudioError, Result};
-use cpal::{traits::{DeviceTrait, HostTrait, StreamTrait}, Device, Host, Stream, StreamConfig, SampleFormat as CpalFormat};
+use cpal::{traits::DeviceTrait, Device, Stream, StreamConfig, SampleFormat as CpalFormat};
 use std::sync::Arc;
 use parking_lot::Mutex;
-use tracing::{info, debug, error, warn};
+use tracing::{info, debug, error};
 
-pub trait OutputBackend: Send + Sync {
+pub trait OutputBackend {
     fn start(&mut self) -> Result<()>;
     fn stop(&mut self) -> Result<()>;
-    fn pause(&mut self) -> Result<()>;
-    fn resume(&mut self) -> Result<()>;
+    fn pause(&mut self);
+    fn resume(&mut self);
     fn set_volume(&mut self, volume: f32) -> Result<()>;
     fn get_volume(&self) -> f32;
     fn is_playing(&self) -> bool;
@@ -99,38 +99,28 @@ impl AudioOutput {
 
         let volume = Arc::clone(&self.volume);
         let is_playing = Arc::clone(&self.is_playing);
-        let sample_format = self.config.sample_format();
 
-        let stream = match sample_format {
-            CpalFormat::F32 => self.create_stream::<f32>(volume, is_playing)?,
-            CpalFormat::I16 => self.create_stream::<i16>(volume, is_playing)?,
-            CpalFormat::U8 => self.create_stream::<u8>(volume, is_playing)?,
-            _ => return Err(AudioError::OutputError("Unsupported sample format".into())),
-        };
+        let stream = self.create_stream(volume, is_playing)?;
 
         self.stream = Some(stream);
-        *is_playing.lock() = true;
+        *self.is_playing.lock() = true;
         info!("AudioOutput started");
         Ok(())
     }
 
-    fn create_stream<T>(&self, volume: Arc<Mutex<f32>>, is_playing: Arc<Mutex<bool>>) -> Result<Stream>
-    where
-        T: cpal::Sample + cpal::SizedSample + Send + 'static,
-    {
+    fn create_stream(&self, volume: Arc<Mutex<f32>>, _is_playing: Arc<Mutex<bool>>) -> Result<Stream> {
         let err_fn = |err| error!("Audio output error: {}", err);
 
         let stream = self.device.build_output_stream(
             &self.config,
-            move |data: &mut [T], _: &cpal::OutputCallbackInfo| {
+            move |data: &mut [f32], _: &cpal::OutputCallbackInfo| {
                 let vol = *volume.lock();
                 if vol > 0.0 {
                     for sample in data.iter_mut() {
-                        let val = sample.to_f32();
-                        *sample = T::from_sample::<f32>(val * vol);
+                        *sample *= vol;
                     }
                 } else {
-                    data.fill(T::MID);
+                    data.fill(0.0);
                 }
             },
             err_fn,
@@ -149,24 +139,12 @@ impl AudioOutput {
         Ok(())
     }
 
-    pub fn pause(&mut self) -> Result<()> {
-        if let Some(stream) = &self.stream {
-            stream.pause().map_err(|e| {
-                AudioError::OutputError(format!("Failed to pause stream: {}", e))
-            })?;
-        }
+    pub fn pause(&mut self) {
         *self.is_playing.lock() = false;
-        Ok(())
     }
 
-    pub fn resume(&mut self) -> Result<()> {
-        if let Some(stream) = &self.stream {
-            stream.resume().map_err(|e| {
-                AudioError::OutputError(format!("Failed to resume stream: {}", e))
-            })?;
-        }
+    pub fn resume(&mut self) {
         *self.is_playing.lock() = true;
-        Ok(())
     }
 
     pub fn set_volume(&mut self, volume: f32) -> Result<()> {

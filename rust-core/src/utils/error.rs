@@ -95,6 +95,7 @@ impl From<config::ConfigError> for AudioError {
     }
 }
 
+#[cfg(feature = "rusqlite")]
 impl From<rusqlite::Error> for AudioError {
     fn from(err: rusqlite::Error) -> Self {
         AudioError::IoError(err.to_string())
@@ -104,5 +105,11 @@ impl From<rusqlite::Error> for AudioError {
 impl From<serde_json::Error> for AudioError {
     fn from(err: serde_json::Error) -> Self {
         AudioError::DecodeError(err.to_string())
+    }
+}
+
+impl From<tokio_tungstenite::tungstenite::Error> for AudioError {
+    fn from(err: tokio_tungstenite::tungstenite::Error) -> Self {
+        AudioError::IoError(err.to_string())
     }
 }

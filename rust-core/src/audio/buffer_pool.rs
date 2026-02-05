@@ -1,5 +1,5 @@
 use crate::audio::format::AudioFormat;
-use ringbuf::{RingBuffer, Producer, Consumer};
+use std::collections::VecDeque;
 use std::sync::Arc;
 use parking_lot::Mutex;
 
@@ -92,46 +92,58 @@ impl BufferPool {
 }
 
 pub struct AudioRingBuffer {
-    producer: Producer<u8>,
-    consumer: Consumer<u8>,
+    buffer: VecDeque<u8>,
     capacity: usize,
 }
 
 impl AudioRingBuffer {
     pub fn new(capacity: usize) -> Self {
-        let rb = RingBuffer::new(capacity);
-        let (producer, consumer) = rb.split();
         Self {
-            producer,
-            consumer,
+            buffer: VecDeque::with_capacity(capacity),
             capacity,
         }
     }
 
     pub fn write(&mut self, data: &[u8]) -> usize {
-        let written = self.producer.write_iter(data).count();
+        let mut written = 0;
+        for &byte in data {
+            if self.buffer.len() < self.capacity {
+                self.buffer.push_back(byte);
+                written += 1;
+            } else {
+                break;
+            }
+        }
         written
     }
 
     pub fn read(&mut self, buf: &mut [u8]) -> usize {
-        let read = self.consumer.read_iter(buf).count();
+        let mut read = 0;
+        for slot in buf.iter_mut() {
+            if let Some(byte) = self.buffer.pop_front() {
+                *slot = byte;
+                read += 1;
+            } else {
+                break;
+            }
+        }
         read
     }
 
     pub fn available(&self) -> usize {
-        self.producer.remaining()
+        self.capacity - self.buffer.len()
     }
 
     pub fn len(&self) -> usize {
-        self.consumer.len()
+        self.buffer.len()
     }
 
     pub fn is_empty(&self) -> bool {
-        self.consumer.is_empty()
+        self.buffer.is_empty()
     }
 
     pub fn is_full(&self) -> bool {
-        self.producer.is_full()
+        self.buffer.len() >= self.capacity
     }
 
     pub fn capacity(&self) -> usize {
@@ -139,9 +151,7 @@ impl AudioRingBuffer {
     }
 
     pub fn clear(&mut self) {
-        while !self.consumer.is_empty() {
-            let _ = self.consumer.skip(1);
-        }
+        self.buffer.clear();
     }
 }
 
@@ -172,6 +182,10 @@ impl SharedRingBuffer {
         self.inner.lock().len()
     }
 
+    pub fn capacity(&self) -> usize {
+        self.inner.lock().capacity()
+    }
+
     pub fn is_empty(&self) -> bool {
         self.inner.lock().is_empty()
     }
@@ -180,15 +194,15 @@ impl SharedRingBuffer {
         self.inner.lock().is_full()
     }
 
-    pub fn clone(&self) -> Self {
-        Self {
-            inner: Arc::clone(&self.inner),
-        }
+    pub fn clear(&self) {
+        self.inner.lock().clear()
     }
 }
 
 impl Clone for SharedRingBuffer {
     fn clone(&self) -> Self {
-        self.clone()
+        Self {
+            inner: Arc::clone(&self.inner),
+        }
     }
 }

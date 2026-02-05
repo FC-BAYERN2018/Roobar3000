@@ -75,7 +75,7 @@ impl AudioClock {
     }
 
     pub fn get_position(&self) -> Option<Duration> {
-        self.start_time.map(|start| {
+        self.start_time.map(|_start| {
             let frames_duration = self.frames_played as f64 / self.format.sample_rate as f64;
             Duration::from_secs_f64(frames_duration)
         })
@@ -129,7 +129,9 @@ impl AudioClock {
     }
 }
 
+#[derive(Clone)]
 pub struct ClockSync {
+    #[allow(dead_code)]
     target_drift_ppm: f64,
     correction_threshold: f64,
 }

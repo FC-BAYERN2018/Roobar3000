@@ -5,7 +5,7 @@ use crate::audio::clock::{AudioClock, ClockSync};
 use crate::decoder::Decoder;
 use crate::output::AudioOutput;
 use crate::dsp::DSPProcessor;
-use crate::utils::error::{AudioError, Result};
+use crate::utils::error::Result;
 use crate::config::audio::AudioConfig;
 use crossbeam_channel::{Sender, Receiver, unbounded};
 use parking_lot::Mutex;
@@ -17,8 +17,10 @@ use tracing::{info, error, debug, warn};
 pub struct AudioEngine {
     player: Arc<Player>,
     decoder: Arc<Mutex<Option<Decoder>>>,
+    #[allow(dead_code)]
     output: Arc<Mutex<Option<AudioOutput>>>,
-    dsp: Arc<Mutex<Option<DSPProcessor>>>,
+    #[allow(dead_code)]
+    dsp: Arc<Mutex<Option<Box<dyn DSPProcessor>>>>,
     buffer_pool: Arc<Mutex<BufferPool>>,
     ring_buffer: SharedRingBuffer,
     clock: Arc<Mutex<AudioClock>>,
@@ -57,7 +59,7 @@ impl AudioEngine {
         let clock_sync = ClockSync::new();
 
         let (command_sender, command_receiver) = unbounded();
-        let (event_sender, event_receiver) = unbounded();
+        let (event_sender, _event_receiver) = unbounded();
 
         let player = Player::new();
 
@@ -87,12 +89,10 @@ impl AudioEngine {
 
         let player = Arc::clone(&self.player);
         let decoder = Arc::clone(&self.decoder);
-        let output = Arc::clone(&self.output);
-        let dsp = Arc::clone(&self.dsp);
         let buffer_pool = Arc::clone(&self.buffer_pool);
         let ring_buffer = self.ring_buffer.clone();
         let clock = Arc::clone(&self.clock);
-        let clock_sync = self.clock_sync;
+        let clock_sync = self.clock_sync.clone();
         let config = self.config.clone();
         let receiver = self.command_receiver.clone();
         let event_sender = self.event_sender.clone();
@@ -101,8 +101,6 @@ impl AudioEngine {
             engine_worker(
                 player,
                 decoder,
-                output,
-                dsp,
                 buffer_pool,
                 ring_buffer,
                 clock,
@@ -137,8 +135,8 @@ impl AudioEngine {
         self.player.event_receiver()
     }
 
-    pub fn player(&self) -> &Player {
-        &self.player
+    pub fn player(&self) -> Arc<Player> {
+        Arc::clone(&self.player)
     }
 
     pub fn state(&self) -> PlayerState {
@@ -171,8 +169,6 @@ impl AudioEngine {
 fn engine_worker(
     player: Arc<Player>,
     decoder: Arc<Mutex<Option<Decoder>>>,
-    output: Arc<Mutex<Option<AudioOutput>>>,
-    dsp: Arc<Mutex<Option<DSPProcessor>>>,
     buffer_pool: Arc<Mutex<BufferPool>>,
     ring_buffer: SharedRingBuffer,
     clock: Arc<Mutex<AudioClock>>,
@@ -182,7 +178,7 @@ fn engine_worker(
     event_sender: Sender<PlayerEvent>,
 ) {
     let mut running = true;
-    let mut target_buffer_level = config.target_buffer_level;
+    let target_buffer_level = config.target_buffer_level;
 
     while running {
         if let Ok(cmd) = receiver.recv_timeout(Duration::from_millis(10)) {

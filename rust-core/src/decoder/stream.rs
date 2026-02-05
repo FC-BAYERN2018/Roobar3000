@@ -1,6 +1,4 @@
 use crate::audio::format::AudioFormat;
-use crate::audio::buffer_pool::AudioBuffer;
-use crate::utils::error::{AudioError, Result};
 use std::path::PathBuf;
 use std::time::Duration;
 
@@ -44,7 +42,7 @@ impl AudioStream {
     pub fn progress(&self) -> f32 {
         self.duration.map_or(0.0, |d| {
             if d.as_secs_f64() > 0.0 {
-                self.position.as_secs_f64() / d.as_secs_f64()
+                (self.position.as_secs_f64() / d.as_secs_f64()) as f32
             } else {
                 0.0
             }

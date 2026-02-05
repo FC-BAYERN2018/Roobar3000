@@ -1,0 +1,4 @@
+(dyn SincInterpolator<f32> + 'static)
+Unique<(dyn SincInterpolator<f32> + 'static)>
+Box<(dyn SincInterpolator<f32> + 'static)>
+std::option::Option<SincFixedIn<f32>>

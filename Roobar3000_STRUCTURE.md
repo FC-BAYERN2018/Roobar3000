@@ -42,8 +42,7 @@ Roobar3000/
 │   │   │   ├── backend.rs          # 输出后端 Trait
 │   │   │   ├── device.rs           # 设备抽象与独占模式管理
 │   │   │   ├── wasapi.rs           # Windows WASAPI 独占模式（Bit-Perfect）
-│   │   │   ├── coreaudio.rs        # macOS CoreAudio 独占模式
-│   │   │   └── bitperfect.rs       # Bit-Perfect 验证与自动采样率匹配
+│   │   │   ├── bitperfect.rs       # Bit-Perfect 验证与自动采样率匹配
 │   │   │
 │   │   ├── dsp/                    # 数字信号处理（精简版）
 │   │   │   ├── mod.rs

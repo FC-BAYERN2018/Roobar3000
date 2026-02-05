@@ -1,9 +1,4 @@
-use crate::audio::format::AudioFormat;
 use crate::utils::error::{AudioError, Result};
-use crate::dsp::resampler_engine::ResamplerEngine;
-use crate::dsp::eq::Equalizer;
-use std::sync::Arc;
-use parking_lot::Mutex;
 use tracing::{debug, trace};
 
 pub trait DSPProcessor: Send + Sync {
@@ -51,7 +46,9 @@ impl DSPChain {
         
         for processor in &mut self.processors {
             if processor.is_enabled() {
-                processor.process(&buffer, &mut buffer)?;
+                let mut temp_buffer = buffer.clone();
+                processor.process(&buffer, &mut temp_buffer)?;
+                buffer = temp_buffer;
             }
         }
 

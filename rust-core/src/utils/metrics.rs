@@ -143,7 +143,7 @@ impl MetricsCollector {
         };
 
         PerformanceReport {
-            metrics,
+            metrics: metrics.clone(),
             uptime,
             decode_error_rate,
             output_error_rate,

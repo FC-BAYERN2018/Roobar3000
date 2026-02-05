@@ -1,8 +1,7 @@
 use crate::audio::format::AudioFormat;
 use crate::utils::error::{AudioError, Result};
-use cpal::{traits::{DeviceTrait, HostTrait}, Device, Host, SupportedStreamConfigRange};
+use cpal::{traits::{DeviceTrait, HostTrait}, Device, Host};
 use serde::{Serialize, Deserialize};
-use std::collections::HashMap;
 use tracing::{info, debug};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -108,7 +107,7 @@ impl DeviceManager {
             .map_err(|e| AudioError::OutputError(format!("Failed to get devices: {}", e)))?;
 
         let default_device = self.host.default_output_device()
-            .map_err(|e| AudioError::OutputError(format!("Failed to get default device: {}", e)))?;
+            .ok_or_else(|| AudioError::OutputError("Failed to get default device".into()))?;
 
         let default_name = default_device.name().unwrap_or_default();
 

@@ -1,0 +1,10 @@
+E:\12_Python_Prj\Roobar3000\target\debug\deps\tracing_appender-87a8b99d7ce7eeeb.d: C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\lib.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\non_blocking.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\rolling.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\rolling\builder.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\worker.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\sync.rs
+
+E:\12_Python_Prj\Roobar3000\target\debug\deps\libtracing_appender-87a8b99d7ce7eeeb.rmeta: C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\lib.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\non_blocking.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\rolling.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\rolling\builder.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\worker.rs C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\sync.rs
+
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\lib.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\non_blocking.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\rolling.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\rolling\builder.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\worker.rs:
+C:\Users\dell\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-appender-0.2.4\src\sync.rs:

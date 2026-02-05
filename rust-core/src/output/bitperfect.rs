@@ -1,4 +1,4 @@
-use crate::audio::format::{AudioFormat, SampleFormat};
+use crate::audio::format::AudioFormat;
 use crate::output::device::{DeviceManager, DeviceInfo};
 use crate::utils::error::{AudioError, Result};
 use tracing::{info, debug, warn};
@@ -52,8 +52,8 @@ impl BitPerfectManager {
     }
 
     pub fn set_config(&mut self, config: BitPerfectConfig) {
-        self.config = config;
         info!("BitPerfect config updated: {:?}", config.mode);
+        self.config = config;
     }
 
     pub fn config(&self) -> &BitPerfectConfig {

@@ -1,6 +1,6 @@
 use clap::Parser;
 use rust_core::{AudioEngine, ipc::server::WebSocketServer, config::manager::ConfigManager};
-use tracing::{info, error};
+use tracing::info;
 use tracing_subscriber;
 
 #[derive(Parser, Debug)]
@@ -26,10 +26,14 @@ async fn main() -> anyhow::Result<()> {
 
     info!("Starting Roobar3000 Audio Engine...");
 
-    let audio_engine = AudioEngine::new(config.audio.clone())?;
+    let mut audio_engine = AudioEngine::new(config.audio.clone())?;
     audio_engine.start()?;
 
-    let ws_server = WebSocketServer::new("127.0.0.1:8080", audio_engine)?;
+    let ws_server = WebSocketServer::new(
+        "127.0.0.1:8080",
+        audio_engine.command_sender().clone(),
+        audio_engine.player().clone()
+    )?;
     ws_server.start().await?;
 
     Ok(())

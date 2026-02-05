@@ -1,17 +1,19 @@
+#[allow(unused_imports)]
 use crate::audio::format::{AudioFormat, SampleFormat};
 use crate::utils::error::{AudioError, Result};
-use rubato::{Resampler, SincFixedIn, SincInterpolationParameters, SincInterpolationType, WindowFunction};
+use rubato::{Resampler as RubatoResampler, SincFixedIn, SincInterpolationParameters, SincInterpolationType, WindowFunction};
 use tracing::{info, debug};
 
-pub struct Resampler {
+pub struct AudioResampler {
     resampler: Option<SincFixedIn<f32>>,
     input_rate: u32,
     output_rate: u32,
     channels: u16,
+    #[allow(dead_code)]
     chunk_size: usize,
 }
 
-impl Resampler {
+impl AudioResampler {
     pub fn new(input_format: AudioFormat, output_rate: u32) -> Result<Self> {
         if input_format.sample_rate == output_rate {
             return Ok(Self {
@@ -97,14 +99,14 @@ mod tests {
     #[test]
     fn test_no_resampling_needed() {
         let format = AudioFormat::new(44100, 2, SampleFormat::F32);
-        let resampler = Resampler::new(format, 44100).unwrap();
+        let resampler = AudioResampler::new(format, 44100).unwrap();
         assert!(!resampler.needs_resampling());
     }
 
     #[test]
     fn test_resampling_needed() {
         let format = AudioFormat::new(44100, 2, SampleFormat::F32);
-        let resampler = Resampler::new(format, 48000).unwrap();
+        let resampler = AudioResampler::new(format, 48000).unwrap();
         assert!(resampler.needs_resampling());
         assert_eq!(resampler.input_rate(), 44100);
         assert_eq!(resampler.output_rate(), 48000);
