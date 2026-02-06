@@ -1,0 +1,2 @@
+std::convert::From<symphonia::symphonia_core::errors::Error>
+std::convert::From<tokio_tungstenite::tungstenite::Error>

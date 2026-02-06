@@ -1,0 +1,8 @@
+E:\31_Rust_Prj\Roobar3000\target\debug\deps\symphonia_utils_xiph-e42d5cb345d4c58c.d: C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-utils-xiph-0.5.5\src\lib.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-utils-xiph-0.5.5\src\flac\mod.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-utils-xiph-0.5.5\src\flac\metadata.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-utils-xiph-0.5.5\src\vorbis\mod.rs
+
+E:\31_Rust_Prj\Roobar3000\target\debug\deps\libsymphonia_utils_xiph-e42d5cb345d4c58c.rmeta: C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-utils-xiph-0.5.5\src\lib.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-utils-xiph-0.5.5\src\flac\mod.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-utils-xiph-0.5.5\src\flac\metadata.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-utils-xiph-0.5.5\src\vorbis\mod.rs
+
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-utils-xiph-0.5.5\src\lib.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-utils-xiph-0.5.5\src\flac\mod.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-utils-xiph-0.5.5\src\flac\metadata.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-utils-xiph-0.5.5\src\vorbis\mod.rs:

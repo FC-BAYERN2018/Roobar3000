@@ -1,0 +1,10 @@
+E:\31_Rust_Prj\Roobar3000\target\debug\deps\ogg_pager-fc7ee7ab20ceae05.d: C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\lib.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\crc.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\error.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\header.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\packets.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\paginate.rs
+
+E:\31_Rust_Prj\Roobar3000\target\debug\deps\libogg_pager-fc7ee7ab20ceae05.rmeta: C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\lib.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\crc.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\error.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\header.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\packets.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\paginate.rs
+
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\lib.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\crc.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\error.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\header.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\packets.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ogg_pager-0.6.1\src\paginate.rs:

@@ -13,8 +13,8 @@ ringbuf = { workspace = true }
 tokio = { workspace = true }
 tokio-tungstenite = { workspace = true }
 futures-util = "0.3"
-rusqlite = { workspace = true, optional = true }
-lofty = { workspace = true, optional = true }
+rusqlite = { workspace = true }
+lofty = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 toml = "0.8"

@@ -5,6 +5,7 @@ pub mod dsp;
 pub mod ipc;
 pub mod config;
 pub mod utils;
+pub mod library;
 
 pub use audio::engine::AudioEngine;
 pub use audio::format::AudioFormat;

@@ -1,0 +1,8 @@
+E:\31_Rust_Prj\Roobar3000\target\debug\deps\symphonia_codec_adpcm-edc292252a7de289.d: C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-codec-adpcm-0.5.5\src\lib.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-codec-adpcm-0.5.5\src\codec_ima.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-codec-adpcm-0.5.5\src\codec_ms.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-codec-adpcm-0.5.5\src\common.rs
+
+E:\31_Rust_Prj\Roobar3000\target\debug\deps\libsymphonia_codec_adpcm-edc292252a7de289.rmeta: C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-codec-adpcm-0.5.5\src\lib.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-codec-adpcm-0.5.5\src\codec_ima.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-codec-adpcm-0.5.5\src\codec_ms.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-codec-adpcm-0.5.5\src\common.rs
+
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-codec-adpcm-0.5.5\src\lib.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-codec-adpcm-0.5.5\src\codec_ima.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-codec-adpcm-0.5.5\src\codec_ms.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\symphonia-codec-adpcm-0.5.5\src\common.rs:

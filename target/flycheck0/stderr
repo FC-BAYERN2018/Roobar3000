@@ -1,16 +1,39 @@
-   0.526007200s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint: stale: changed "E:\\12_Python_Prj\\Roobar3000\\rust-core\\src\\decoder\\resampler.rs"
-   0.526052000s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint:           (vs) "E:\\12_Python_Prj\\Roobar3000\\target\\debug\\.fingerprint\\rust-core-8c70899c265f3319\\dep-lib-rust_core"
-   0.526060400s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13414786908, nanos: 346370400 } < FileTime { seconds: 13414786933, nanos: 121169200 }
-   0.526449000s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint: fingerprint dirty for rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("rust_core", ["lib"], "E:\\12_Python_Prj\\Roobar3000\\rust-core\\src\\lib.rs", Edition2021) }
-   0.526481700s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "E:\\12_Python_Prj\\Roobar3000\\target\\debug\\.fingerprint\\rust-core-8c70899c265f3319\\dep-lib-rust_core", reference_mtime: FileTime { seconds: 13414786908, nanos: 346370400 }, stale: "E:\\12_Python_Prj\\Roobar3000\\rust-core\\src\\decoder\\resampler.rs", stale_mtime: FileTime { seconds: 13414786933, nanos: 121169200 } }))
-   0.601742700s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint: stale: changed "E:\\12_Python_Prj\\Roobar3000\\rust-core\\src\\decoder\\resampler.rs"
-   0.601791500s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint:           (vs) "E:\\12_Python_Prj\\Roobar3000\\target\\debug\\.fingerprint\\rust-core-c40de16f4cee82de\\dep-test-lib-rust_core"
-   0.601804000s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13414786908, nanos: 346370400 } < FileTime { seconds: 13414786933, nanos: 121169200 }
-   0.602180000s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint: fingerprint dirty for rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("rust_core", ["lib"], "E:\\12_Python_Prj\\Roobar3000\\rust-core\\src\\lib.rs", Edition2021) }
-   0.602213800s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "E:\\12_Python_Prj\\Roobar3000\\target\\debug\\.fingerprint\\rust-core-c40de16f4cee82de\\dep-test-lib-rust_core", reference_mtime: FileTime { seconds: 13414786908, nanos: 346370400 }, stale: "E:\\12_Python_Prj\\Roobar3000\\rust-core\\src\\decoder\\resampler.rs", stale_mtime: FileTime { seconds: 13414786933, nanos: 121169200 } }))
-   0.610373900s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust-core"}: cargo::core::compiler::fingerprint: fingerprint dirty for rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core)/Check { test: false }/TargetInner { name: "rust-core", doc: true, ..: with_path("E:\\12_Python_Prj\\Roobar3000\\rust-core\\src\\main.rs", Edition2021) }
-   0.610403300s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust-core"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleDepFingerprint { name: "rust_core" })
-   0.612228600s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust-core"}: cargo::core::compiler::fingerprint: fingerprint dirty for rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core)/Check { test: true }/TargetInner { name: "rust-core", doc: true, ..: with_path("E:\\12_Python_Prj\\Roobar3000\\rust-core\\src\\main.rs", Edition2021) }
-   0.612251300s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core) target="rust-core"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleDepFingerprint { name: "rust_core" })
-    Checking rust-core v0.1.0 (E:\12_Python_Prj\Roobar3000\rust-core)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.25s
+   0.353176200s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint: stale: changed "E:\\31_Rust_Prj\\Roobar3000\\rust-core\\src\\library\\database.rs"
+   0.353212000s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint:           (vs) "E:\\31_Rust_Prj\\Roobar3000\\target\\debug\\.fingerprint\\rust-core-5b2485af7cd1bb1f\\dep-lib-rust_core"
+   0.353219500s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13414826507, nanos: 503119600 } < FileTime { seconds: 13414826519, nanos: 249539800 }
+   0.353592500s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint: fingerprint dirty for rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("rust_core", ["lib"], "E:\\31_Rust_Prj\\Roobar3000\\rust-core\\src\\lib.rs", Edition2021) }
+   0.353625800s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "E:\\31_Rust_Prj\\Roobar3000\\target\\debug\\.fingerprint\\rust-core-5b2485af7cd1bb1f\\dep-lib-rust_core", reference_mtime: FileTime { seconds: 13414826507, nanos: 503119600 }, stale: "E:\\31_Rust_Prj\\Roobar3000\\rust-core\\src\\library\\database.rs", stale_mtime: FileTime { seconds: 13414826519, nanos: 249539800 } }))
+   0.425013900s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint: fingerprint error for rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("rust_core", ["lib"], "E:\\31_Rust_Prj\\Roobar3000\\rust-core\\src\\lib.rs", Edition2021) }
+   0.425043500s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core) target="rust_core"}: cargo::core::compiler::fingerprint:     err: failed to read `E:\31_Rust_Prj\Roobar3000\target\debug\.fingerprint\rust-core-85ef5e4add6e8da4\test-lib-rust_core`
+
+Caused by:
+    系统找不到指定的文件。 (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.444064400s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core) target="rust-core"}: cargo::core::compiler::fingerprint: fingerprint dirty for rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core)/Check { test: false }/TargetInner { name: "rust-core", doc: true, ..: with_path("E:\\31_Rust_Prj\\Roobar3000\\rust-core\\src\\main.rs", Edition2021) }
+   0.444099800s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core) target="rust-core"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleDepFingerprint { name: "rust_core" })
+   0.445885500s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core) target="rust-core"}: cargo::core::compiler::fingerprint: fingerprint dirty for rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core)/Check { test: true }/TargetInner { name: "rust-core", doc: true, ..: with_path("E:\\31_Rust_Prj\\Roobar3000\\rust-core\\src\\main.rs", Edition2021) }
+   0.445904200s  INFO prepare_target{force=false package_id=rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core) target="rust-core"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleDepFingerprint { name: "rust_core" })
+    Checking rust-core v0.1.0 (E:\31_Rust_Prj\Roobar3000\rust-core)
+error: could not compile `rust-core` (lib test) due to 1 previous error; 4 warnings emitted

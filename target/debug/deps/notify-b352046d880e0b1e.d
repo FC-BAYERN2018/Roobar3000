@@ -1,0 +1,11 @@
+E:\31_Rust_Prj\Roobar3000\target\debug\deps\notify-b352046d880e0b1e.d: C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\lib.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\windows.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\event.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\null.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\poll.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\config.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\error.rs
+
+E:\31_Rust_Prj\Roobar3000\target\debug\deps\libnotify-b352046d880e0b1e.rmeta: C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\lib.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\windows.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\event.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\null.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\poll.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\config.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\error.rs
+
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\lib.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\windows.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\event.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\null.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\poll.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\config.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\notify-6.1.1\src\error.rs:

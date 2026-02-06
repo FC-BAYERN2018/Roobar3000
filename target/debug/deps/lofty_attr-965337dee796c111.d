@@ -1,0 +1,10 @@
+E:\31_Rust_Prj\Roobar3000\target\debug\deps\lofty_attr-965337dee796c111.d: C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\lib.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\attribute.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\internal.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\lofty_file.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\lofty_tag.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\util.rs
+
+E:\31_Rust_Prj\Roobar3000\target\debug\deps\lofty_attr-965337dee796c111.dll: C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\lib.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\attribute.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\internal.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\lofty_file.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\lofty_tag.rs C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\util.rs
+
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\lib.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\attribute.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\internal.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\lofty_file.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\lofty_tag.rs:
+C:\Users\FC_BAYERN2018\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lofty_attr-0.11.1\src\util.rs:
